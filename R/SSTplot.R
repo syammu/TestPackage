@@ -26,8 +26,6 @@ SSTplot <- function(date="last"){
     date,
     ")%5D%5B(7.025):(20.025)%5D%5B(70.025):(78.025)%5D&.draw=surface&.vars=longitude%7Clatitude%7Canalysed_sst&.colorBar=%7C%7C%7C16%7C34%7C&.bgColor=0xffccccff&.trim=0&.size=300"
     )
-  im <- load.image(url)
-  opar <- par(mar=c(0,0,0,0))
-  plot(im, axes=FALSE)
-  par(opar)
-}
+  img <- readPNG(getURLContent(url))
+  grid::grid.raster(img)
+  }
