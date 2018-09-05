@@ -13,7 +13,7 @@
 myarimaforecast <- function(data, nyears=10){
   # This is how I would write these 3 lines using a pipe
   # data %>% auto.arima %>% forecast(h = nyears) %>% plot
-  fit <- auto.arima(data)
-  fc <- forecast(fit, h = nyears)
+  fit <- forecast::auto.arima(data)
+  fc <- forecast::forecast(fit, h = nyears)
   plot(fc)
 }

@@ -5,10 +5,7 @@ Author: Eli Holmes
 Maintainer: <eli.holmes@noaa.gov>
 Description: This is a template package for students to copy and experiment with for the short course.
 Depends: R (>= 3.4.1)
-Imports: 
-    RCurl,
-    grid,
-    forecast
+Imports: RCurl, png, grid, forecast
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
