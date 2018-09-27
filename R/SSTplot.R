@@ -18,7 +18,7 @@
 #' @export
 SSTplot <- function(date="last"){
   if(date!="last"){
-    if(as.numeric(format(as.Date("2008-09-10"),"%Y"))<2013) stop("This SST data set only goes back to 2013")
+    if(as.numeric(format(as.Date(date),"%Y"))<2013) stop("This SST data set only goes back to 2013")
     date <- paste0(date,"T12:00:00Z")
   }
   url <- paste0(
